@@ -26,3 +26,5 @@ exercise 1.5 asks: "Why is this code illegial":
   it's illegial because you terminate the statement with a ';' on line 1
   Line 2 therefore has no lvalue for the '<<' operator encountered as the first token
    (that's a guess, I didn't actually try to run it.)
+   
+   pretty easy to fix - just remove the semi's
