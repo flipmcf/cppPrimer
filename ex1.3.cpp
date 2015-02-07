@@ -8,7 +8,13 @@ int main()
     
     std::cin >> x >> y;
     
-    std::cout << "the product of " << x << " and " << y 
-              << " is " << x * y << std::endl;
+    std::cout << "the product of ";
+    std::cout << x ;
+    std::cout << " and ";
+    std::cout << y;
+    std::cout << " is " ;
+    std::cout << x * y ;
+    std::cout << std::endl;
+    
     return 0;
 }
