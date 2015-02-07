@@ -1,0 +1,18 @@
+Notes from exercise 1:
+    
+I am using Linux.
+
+My C++ compiler is `g++`
+
+and I'm able to compile with:
+  `g++ -o <output filename> <source file>`
+  
+and run with:
+   `./<output filename>`
+   
+(I don't like using 'a.out' as a default filename.)
+
+-----
+on the shell, `echo ?$` gives you the return code (see ex1.cpp)
+
+Return codes in BASH are postive, 8-bit numbers, so `return -1` will yeild the 2's complement postive # of 255
