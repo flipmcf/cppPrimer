@@ -28,3 +28,20 @@ exercise 1.5 asks: "Why is this code illegial":
    (that's a guess, I didn't actually try to run it.)
    
    pretty easy to fix - just remove the semi's
+   
+-----
+exercise 1.8 asks:   "Which of the following output statement are legal":
+
+I predict: ` cout << "/*";  ` is legal -because the "comment start" is inside a string literal, where tabs & spaces are considered string literals
+Also, ` cout << "*/"; `  is legal, because the comment end does not appear inside a comment block
+
+the others will be illegial, because they all contain a `*/` inside a comment block, the fact they are inside quotes doesn't help.
+
+(now, off to try it out)
+
+Well, the third also compiled and is legal... I should have seen that.
+   std::cout << /*  "*/" /*  "/*"   */;
+But "don't do that"
+  The first quote is part of a comment.
+  The second quote that looks like a close-quote is actually an open quote.
+hey, READABILITY COUNTS!  But maybe that's not part of the zen of C++
