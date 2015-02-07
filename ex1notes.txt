@@ -16,3 +16,13 @@ and run with:
 on the shell, `echo ?$` gives you the return code (see ex1.cpp)
 
 Return codes in BASH are postive, 8-bit numbers, so `return -1` will yeild the 2's complement postive # of 255
+
+-------
+exercise 1.5 asks: "Why is this code illegial":
+
+  std::cout << "The sum of " << v1;
+            << "and " << v2;  
+            
+  it's illegial because you terminate the statement with a ';' on line 1
+  Line 2 therefore has no lvalue for the '<<' operator encountered as the first token
+   (that's a guess, I didn't actually try to run it.)
