@@ -45,3 +45,21 @@ But "don't do that"
   The first quote is part of a comment.
   The second quote that looks like a close-quote is actually an open quote.
 hey, READABILITY COUNTS!  But maybe that's not part of the zen of C++
+
+
+==== 
+Exercise 1.12 asks: "What does this loop do":
+
+int sum = 0;
+for (int i = -100; i <= 100; ++i)
+    sum += i;
+    
+The loop will add up all the #'s between -100 and 100 and store the value in 'sum'
+
+The final value should be zero:
+   Sum of numbers from -100 to 100 is equal to:
+     the sum of the numbers from -100 to 0 plus the sum of the numbers from 0 to 100
+     These two sums are equal, except for the sign.  One will be negative and the other positve.
+     Adding the same value to itself, with one of those values being negative, is Zero.
+     
+     
