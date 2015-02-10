@@ -62,4 +62,12 @@ The final value should be zero:
      These two sums are equal, except for the sign.  One will be negative and the other positve.
      Adding the same value to itself, with one of those values being negative, is Zero.
      
-     
+
+===========
+Section 1.4.4:
+
+exercise 1.17:
+  If all the #'s are equal, the 'else' will never run, the while will fail, and a single line will be printed
+  as the last value.
+  If all the #'s are unique, 'cnt' will never increment past 1 (the if inside the while will never run)
+  and every number will print a line.
