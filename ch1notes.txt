@@ -71,3 +71,9 @@ exercise 1.17:
   as the last value.
   If all the #'s are unique, 'cnt' will never increment past 1 (the if inside the while will never run)
   and every number will print a line.
+  
+======
+Section 1.5.1
+Squash the c++11 warnings by adding the --std=c++11 argument to g++
+
+now compiling with: g++ -std=c++11 -o sec1.5.1 sec1.5.1.cpp
