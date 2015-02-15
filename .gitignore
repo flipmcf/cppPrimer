@@ -1,0 +1,11 @@
+#ignore all files except for specifically specified files
+*
+
+#cpp source code
+!*.cpp
+
+#text notes 
+!*.txt
+
+#this file (.gitignore)
+!.gitignore
