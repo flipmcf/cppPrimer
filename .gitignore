@@ -7,5 +7,8 @@
 #text notes 
 !*.txt
 
+#unignore all dirs
+!*/
+
 #this file (.gitignore)
 !.gitignore

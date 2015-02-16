@@ -48,3 +48,51 @@ std::cout << i - i2 << std::endl; // -32 (yea signed!)
 
 std::cout << i - u << std::endl; // 32
 std::cout << u - i << std::endl;  //oops, but probably ok, barely.  result is 0.
+
+
+=========
+Exercise 2.5: Determine the type and explain the difference:
+a: 'a' : Character - 8 bit
+   L'a': Wide char (wchar_t) at least 16 bits
+   "a":  string - 2 bytes - one for the 'a' and one for the null terminator '\0'
+   L"a": string of wchar_t characters, followed by a null terminator
+   
+b: 10 : integer '10' base 10 type 'int' 
+   10u : integer '10' base 10 type 'unsigned int' 
+   10L : integer '10' base 10 type 'long'
+   10uL : integer '10' base 10 type 'unsigned long'
+   012  : octal '12' ( 10 in base 10 ) type 'int'
+   0xC: : hex '0C' (12 in base 10) type 'int'
+   
+c: 3.14 : double
+   3.14f : float
+   3.14L : long double
+   
+d: 10  : int
+   10u : unsigned int
+   10. : double
+   10e-2 : double
+   
+====
+Exercise 2.6
+
+int month=9, day=7;
+int month=09, day=07;
+// the difference between these two statements is that the first is base 10, the second is octal.
+// additionally, 09 is an invalid octal #, and would probably be an error at compile time
+
+======
+Exercise 2.7
+
+a: "Who goes with F\145rgus?\012"
+   This represents "Who goes with Fargus?" followed by a newline '\n' and ending with a null '\0'
+
+b: 3.14e1L
+     3.14 x 10^1 = 31.4  Stored in a long double
+     
+c: 1024f  
+      1024.0 stored as a float
+      
+d: 3.14L
+     3.14 stored as a long double
+    
