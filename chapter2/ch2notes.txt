@@ -80,6 +80,7 @@ int month=9, day=7;
 int month=09, day=07;
 // the difference between these two statements is that the first is base 10, the second is octal.
 // additionally, 09 is an invalid octal #, and would probably be an error at compile time
+//  -yes, it is "error: invalid digit "9" in octal constant
 
 ======
 Exercise 2.7
@@ -95,4 +96,20 @@ c: 1024f
       
 d: 3.14L
      3.14 stored as a long double
+     
+     
+========
+Exercise 2.9:
+Explain:
+
+a) std::cin >> int input_value;
+    # Error: unexpected primary-expression before 'int'
     
+b) int i = { 3.14 };
+   #compiler warning: truncate a double to an int using list initialization
+     
+c) double salary = wage = 9999.99
+   #invalid, error:  'wage' is undefined.
+      
+d) int i = 3.14;   # initialize i to '3' without warning - dangerous and without warning.
+   
