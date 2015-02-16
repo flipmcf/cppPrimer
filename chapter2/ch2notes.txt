@@ -113,3 +113,21 @@ c) double salary = wage = 9999.99
       
 d) int i = 3.14;   # initialize i to '3' without warning - dangerous and without warning.
    
+=======
+Exercise 2.10:
+
+What are the initial values:
+ std::string global_str;
+ int global_int;
+ 
+ int main()
+ {
+    int local_int;
+    std::string local_str;
+ }
+
+global_str = empty string
+global_int = 0 (global scope)
+
+local_int = undefined (local scope)
+local_str = empty string (as defined by std::string class)
