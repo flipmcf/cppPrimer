@@ -232,4 +232,17 @@ A pointer stores the address of an object, and is an object itself of type point
  Pointers can be changed after definition (or assignment) to point to different objects.
  when you use a pointer, you (should / probably want to) dereference it to get the object it points to.
 
- 
+====
+Exercise 2.20:
+  What does this program do:
+  
+  int i = 42;   //declare 'i' and define it to have the value of '42'
+  int *pi = &i; //declare pi as a pointer to an integer, and define it as the address of 'i'
+  *pi = *pi * *pi;  //dereference pi (value 42) and multuply it by dereference pi (42) 
+                    // and store it where pi points to 'i'
+                    
+   
+  
+  
+  
+  
