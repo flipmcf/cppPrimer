@@ -238,7 +238,7 @@ Exercise 2.20:
   
   int i = 42;   //declare 'i' and define it to have the value of '42'
   int *p1 = &i; //declare p1 as a pointer to an integer, and define it as the address of 'i'
-  *pi = *p1 * *p1;  //dereference p1 (value 42) and multuply it by dereference p1 (42) 
+  *p1 = *p1 * *p1;  //dereference p1 (value 42) and multuply it by dereference p1 (42) 
                     // and store it where p1 points to (i)
                     
    
