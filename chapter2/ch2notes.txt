@@ -181,3 +181,28 @@ std::cout << i << " " << sum << std::endl;
 because the printed 'i' comes from the (global) scope, but the for loop defines and masks 'i'.
 
 --cool - I was right
+
+===
+Finally, some cool stuff
+===
+Exercise 2.15 which of the following definitions, if any, are invalid, why?
+a) int ival = 1.01;  //Valid, but you are truncating the decimal
+b) int &rval1 = 1.01; //invalid - references must be initialized to objects, not literals
+c) int &rval2 = ival; //valid.  
+d) int &rval3;  //invalid - must initialize a reference
+
+===
+Exercise 2.16
+Which assignments are are invalid.  If they are valid, describe what they do.
+
+int i = 0, &r1 = i; double d = 0, &r2 = d;
+a) r2 = 3.14159;  //Valid  d is assigned the value 3.14159
+b) r1 = r2  //Invalid Type error (wrong - r1 is now '3')
+c) i = r2;  //Invalid type error (wrong, i is now '3')
+d) r1 = d   //Invalid type error (wrong, r1 is now '3') 
+(must check these ....  see ex2.16.cpp)
+
+--- WOAH!  they are all valid?  Assignments don't type check like declarations?
+---- I predict some nasty bugs in my future here...
+--
+Corrected answers
