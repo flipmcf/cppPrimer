@@ -131,3 +131,13 @@ global_int = 0 (global scope)
 
 local_int = undefined (local scope)
 local_str = empty string (as defined by std::string class)
+
+
+=====
+Exercise 2.11:
+
+Explain whether each of the following is a declaration or a definition
+a) extern int ix = 1024;  // This is a definition because it is initialized
+b) int iy;  // This is a definition because the 'extern' keyword is not present
+c) extern int iz;  // this is a declaration - extern used and uninitialized
+
