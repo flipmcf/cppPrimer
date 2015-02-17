@@ -150,3 +150,34 @@ b) int _;  // this is valid (side note, usually is the name of the locale transl
 c) int catch-22;  //invalid, the '-' character is not valid in an identifier
 d) int 1_or_2 = 1; //invalid - starts with a numeric
 e) double Double = 3.14 // valid (really?)
+
+
+=====
+Exercise 2.13:
+
+what is the value of 'j' in the following:
+
+int i = 42;
+int main()
+{
+   int i = 100;
+   int j = i
+}
+
+Answer: 100  (main i masks global i)
+
+=====
+exercise 2.14:
+
+is the following progarm legal?  if so, what's the output:
+
+int i = 100, sum = 0;
+for (int i = 0; i != 10; ++i)
+   sum += i;
+std::cout << i << " " << sum << std::endl;
+
+(before I try it) I would think that the output will be:
+"100 45"
+because the printed 'i' comes from the (global) scope, but the for loop defines and masks 'i'.
+
+--cool - I was right
