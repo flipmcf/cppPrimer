@@ -141,3 +141,12 @@ a) extern int ix = 1024;  // This is a definition because it is initialized
 b) int iy;  // This is a definition because the 'extern' keyword is not present
 c) extern int iz;  // this is a declaration - extern used and uninitialized
 
+====
+Exercise 2.12:
+Which of these names are invalid:
+
+a) int double = 3.14; //invalid: 'double' is a keyword
+b) int _;  // this is valid (side note, usually is the name of the locale translator function, fyi)
+c) int catch-22;  //invalid, the '-' character is not valid in an identifier
+d) int 1_or_2 = 1; //invalid - starts with a numeric
+e) double Double = 3.14 // valid (really?)
