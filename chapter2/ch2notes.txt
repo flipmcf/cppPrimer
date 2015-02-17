@@ -217,3 +217,19 @@ i = 5; ri = 10;
 std::cout << i << " " << ri << std::endl;
 
 Answer:   "10 10"
+
+
+====
+Exercise 2.19:
+Explain the key differences between pointers and references:
+
+A reference is an "alias" to a named object.  It, itself, is not an object.
+ References must point to an object and once it's defined, it cannot change.
+ when you use the reference, you always get the object it refers to.
+
+A pointer stores the address of an object, and is an object itself of type pointer.
+ Pointers don't have to point to an object, they can be null.
+ Pointers can be changed after definition (or assignment) to point to different objects.
+ when you use a pointer, you (should / probably want to) dereference it to get the object it points to.
+
+ 
