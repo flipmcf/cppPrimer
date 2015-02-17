@@ -206,3 +206,14 @@ d) r1 = d   //Invalid type error (wrong, r1 is now '3')
 ---- I predict some nasty bugs in my future here...
 --
 Corrected answers
+
+
+====
+Exercise 2.17:  What does this print?
+
+int i, &ri = i;
+i = 5; ri = 10;
+
+std::cout << i << " " << ri << std::endl;
+
+Answer:   "10 10"
