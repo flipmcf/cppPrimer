@@ -258,7 +258,13 @@ c) int *p = &i;
    
    
 ======
+exercise 2.22:
+Assuming p is a pointer to int, explain the following code:
 
+if (p) //  convert the pointer to a bool.  Will be true if p is not 0 or nullptr
+           "any non-zero pointer evaluates to true"
+           
+if (*p) // dereference p and convert the value in i to a bool.  True if i is non-zero
    
   
   
