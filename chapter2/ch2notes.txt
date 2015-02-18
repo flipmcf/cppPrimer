@@ -266,7 +266,20 @@ if (p) //  convert the pointer to a bool.  Will be true if p is not 0 or nullptr
            
 if (*p) // dereference p and convert the value in i to a bool.  True if i is non-zero
    
-  
+   
+=====
+exercise 2.23:
+given a pointer p, can you determine whether p points to a valid object?
+if so, how?  if not, why?
+
+Short answer: No.  It's entirely possible to have p pointing to an invalid object.
+Long answer: Yes, dereference it an pray that the program crashes. You probably shouldn't do it in production.  
+
+(is there such a thing as C++ humor?)
+
+=====
+Exercise 2.24
+
   
   
   
