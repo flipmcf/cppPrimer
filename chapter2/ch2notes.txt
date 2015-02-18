@@ -278,7 +278,19 @@ Long answer: Yes, dereference it an pray that the program crashes. You probably 
 (is there such a thing as C++ humor?)
 
 =====
-Exercise 2.24
+
+Exercise 2.24:
+Why is the init of p legal bu that of lp illegial:
+
+  int i = 42;
+  void *p = &i;
+  long *lp = &i;
+  
+p is legal because a void pointer does not do type checking.  
+However, you can't convert a pointer to an integer to a pointer to a long.
+
+
+
 
   
   
