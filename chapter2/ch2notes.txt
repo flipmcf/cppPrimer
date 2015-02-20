@@ -309,6 +309,30 @@ ip is a pointer to int - value undefined
 ip2 is an int - value undefined
 
 
+==========
+Exercise 2.26:
+which of the following are legal?  For those that are illegal, explain why:
+
+a) const int buf; // illegial, must initialize const
+b) int cnt = 0;   // legal
+c) const int sz = cnt;  // (assuming 'b' was run) this is legal;
+d) ++cnt; ++sz;  // illegial.  ++cnt modifies constant (and so does ++sz)
+
+===========
+Exercise 2.27:
+Which of the following initializations are legal? Explain why.
+
+a) int i = -1, &r = 0; //illegial - reference cannot refer to literal
+b) int *const p2 = &i2; // legal.  p2 will always point to i2
+c) const int i = -1; &r = 0;  // Legal! constant references may refer to a literal
+d) const int *const p3 = &i2; // legal.  p3 will always point to i2
+                              // and cannot modify the value if i2 through p3
+e) const int *p1 = &i2;       // legal.  pi will always point to i2, but you can modify i2 through p1
+f) const int &const r2;       // (not sure) illegial - '&' must preceed an identifier.
+                              // if it is legal, then a reference must be initialized to an object
+g) const int i2 = i, &r = i;  // legal. i2 cannot be modified, but i can be modified through &r
+                              // also, if i changes, i2 does not.
+
 
 
 
