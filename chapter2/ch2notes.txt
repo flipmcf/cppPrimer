@@ -348,9 +348,24 @@ c) const int ic, &r = ic; // ic is a constant int, r is a constant int reference
 
 d) const int *const p3;   // p3 is a constant pointer (it can't change to point to a new value)
                           // pointing to a constant integer (you can't change the value it points to)
-                          // 
+                          // illegial, because p3 must be initialized to point at something.
 
-e) 
+e) const int *p;          // p is a pointer to a const integer.
+                          // valid, because p need not be initialized, and may change to point to a different
+                          // integer.  However, you can not change the value of what p points to, even if that 
+                          // object is not const.
+                          
 
-  
-  
+
+==========
+Exercise 2.29
+U[s]ing the variables in the previous exrcise, which of the following assignments are legal? Why?
+
+a) i = ic;  // Legal  i is not constant.
+b) p1 = p3; // legal, p1 is not a constant pointer;
+c) p1 = &ic // Illegial.  ic is a const int, p1 is a pointer to (non const) int.  
+            // Base types do not match
+d) p3 = &ic // illegial. Assignment to *const.
+e) p2 = p1 //  Illegial.  Assignment to *const.
+f) ic = *p3 // illegial.  ic is a constant integer, and cannot be assigned to.
+
