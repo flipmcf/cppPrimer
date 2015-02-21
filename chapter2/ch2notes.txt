@@ -332,10 +332,25 @@ f) const int &const r2;       // (not sure) illegial - '&' must preceed an ident
                               // if it is legal, then a reference must be initialized to an object
 g) const int i2 = i, &r = i;  // legal. i2 cannot be modified, but i can be modified through &r
                               // also, if i changes, i2 does not.
+                              
+=====
+Exercise 2.28
+Explain the following definitions. Identify any that are illegial.
 
+a) int i, *const cp;  // i is an int.  cp is a constant pointer to an integer.
+                      // Illegial, because cp must be initialized to point to something.
+                      
+b) int *p1, *const p2; // p1 is a pointer to an integer.  p2 is a constant pointer to int.
+                       // illegial, because p2 must be initialized to point to something
+                     
+c) const int ic, &r = ic; // ic is a constant int, r is a constant int reference to ic
+                         // illegial, because ic must be initialized to an integer value
 
+d) const int *const p3;   // p3 is a constant pointer (it can't change to point to a new value)
+                          // pointing to a constant integer (you can't change the value it points to)
+                          // 
 
-
+e) 
 
   
   
