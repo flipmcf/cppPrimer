@@ -383,4 +383,27 @@ const int *p2 = &v2, *const p3 = &i, &r2 = v2;
    // p3 is high level and low level - it cannot change to where it points and treats what it points to as const
    // r2 is both high and low level - references are always high level, and it refers to v2 as a const.
 
+=======
+Exercise 2.31
+Given the declarations in the prev. exercise determine whether the following assignments are legal.
+Explain how the top-level or low-level const applies in each case.
 
+r1 = v2; //Legal: references are top-level consts by nature - that's not changing ever.
+         //it refences v1, which is (low-level) non-const so v1 is now equal to v2
+
+p1 = p2;  //illegial.  you can change where p1 points (top-level)
+          // however, low level-types don't match,
+          // nor can you convert a const int (p2) to a non-const (p1)
+          // p1 is not a top-level const, so it can change where it points.
+          
+p2 = p1;  //legal.  low-level const types don't match,
+          // however, you CAN convert a non-const int (p1) to a const int (p2)
+          // also, p2 is not a top-level const, so it can change where it points.
+
+p1 = p3; //illegial
+          //p1 is not a top-level const, so that's ok
+          // however, low-level types do not match, 
+          // and you can't convert p3 low-level const to a low-level non-const
+          
+p2 = p3; //legal  p2 is not a top-level const
+         // low level's are both const ints (types match) so it's ok.
