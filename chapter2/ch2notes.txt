@@ -407,3 +407,20 @@ p1 = p3; //illegial
           
 p2 = p3; //legal  p2 is not a top-level const
          // low level's are both const ints (types match) so it's ok.
+         
+======
+Exercise 2.32
+
+is the following code legal?
+
+int null = 0, *p = null;
+
+//no.  can't assign 'int' to 'pointer to int'
+
+however, I think you can make it legal:
+  constexpr int null = 0;
+  int *p = null;
+
+However, GCC may have a bug here, because I can't get it to compile - even outside of main()
+
+See: http://stackoverflow.com/questions/13493353/is-this-constexpr-integer-not-a-null-pointer-constant
