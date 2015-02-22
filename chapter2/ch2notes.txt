@@ -512,4 +512,29 @@ decltype(a = b) d = a //d is a int&.  It refences a. However, decltype doesn't a
 // b remains unchanged at the value of 4
 
 
+=====
+Exercise 2.38
+
+Describe the differences in type deduction between decltype and auto.
+
+Most notably, `auto` will drop top-level const definitions from the rhs expression; decltype will preserve the top-level const definitions.
+Also, auto will 'follow' references on the rhs to the base type, while decltype will preserve references
+decltype will not evaluate expressions, but deduce what type an expression would return if it was evaluated.  rhs expressions are always evaluated, which is what auto uses.
+
+Give example of an expression where auto and decltype will return the same type.
+
+the expression is "a":
+
+int a = 0;
+auto b = a;  // b is an int
+decltype(a) c = 0; //c is also an int.
+
+
+Give an example of an expression where auto and decltype will return different types:
+
+the expression is "a + 0"
+
+int a = 0;
+auto b = a + 0;  // b is an int
+decltype(a+ 0) c = a;
 
