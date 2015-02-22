@@ -20,10 +20,10 @@ int main()
     std::cout << "j: " << j << std::endl;
     
     //this should fail, because &k is const
-    k = 12;
+    //k = 12; //error: assignment of read-only reference ‘k’
     
     //this should fail, because p points to a const int
-    *p = 12;
+    //*p = 12; // error: assignment of read-only location ‘* p’
     //however, this should be ok, because p is not a top-level const
     p = &j;
     //and this will print '12'
@@ -33,13 +33,13 @@ int main()
     //this will print '42'
     std::cout << "j2: " << j2 << std::endl;
     //this will fail, because j2 is a const int:
-    j2 = 12;
+    //j2 = 12; //error: assignment of read-only variable ‘j2’
     
         
     //this will print '42'
     std::cout << "k2: " << k2 << std::endl;
     // but this will fail, because k2 references a const int
-    k2 = 12;
+    //k2 = 12; //error: assignment of read-only reference ‘k2’
         
     
 }
