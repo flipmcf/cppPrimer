@@ -498,3 +498,18 @@ a = 4
 b = 4
 c = 4
 d = 4
+
+==== 
+Exercise 2.37
+Assignment is an example of an expression that yields a reference type.
+The type is a freference to the type of the left-hand operand.
+That is, if i is an int, then the type of the expression (i=x) is int&
+Using that knowlege, determent the type and value of each variable in this code:
+
+int a = 3, b = 4;
+decltype(a) c = a;  //c is an int.  the value of c is 3
+decltype(a = b) d = a //d is a int&.  It refences a. However, decltype doesn't actually 'do' the assignment, so a is still 3 (and so is d)
+// b remains unchanged at the value of 4
+
+
+
