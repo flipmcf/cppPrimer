@@ -5,7 +5,7 @@
 !*.cpp
 
 #Data files
-!.dat
+!*.dat
 
 #text notes 
 !*.txt
