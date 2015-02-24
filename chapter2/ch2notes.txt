@@ -536,5 +536,11 @@ the expression is "a + 0"
 
 int a = 0;
 auto b = a + 0;  // b is an int
-decltype(a + 0) c = a; //c is an int&  
+decltype(a + 0) c = a; //c is an int& 
+
+===
+Exercise 2.39
+Nice error message:  error: expected ‘;’ after struct definition
+should be easy to remember.
+
 
