@@ -536,5 +536,5 @@ the expression is "a + 0"
 
 int a = 0;
 auto b = a + 0;  // b is an int
-decltype(a+ 0) c = a;
+decltype(a + 0) c = a; //c is an int&  
 
