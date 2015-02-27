@@ -4,6 +4,9 @@
 #cpp source code
 !*.cpp
 
+#header files
+!*.h
+
 #Data files
 !*.dat
 
